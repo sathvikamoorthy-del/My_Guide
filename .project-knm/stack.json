@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "project": "My_Guide",
+  "preset": null,
+  "apps": [
+    {
+      "name": "api",
+      "type": "api",
+      "language": "typescript",
+      "framework": "express",
+      "frameworkVersion": "5",
+      "runtime": "node 20",
+      "modules": [
+        {
+          "type": "backend-framework",
+          "id": "express",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "testing",
+          "id": "jest-testing",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "build-tools",
+          "id": "node-build",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "audit-trail",
+          "id": "audit-trail",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "database",
+          "id": "sqlite-database",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "orm",
+          "id": "drizzle-sqlite",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "auth",
+          "id": "jwt-auth",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "multi-tenancy",
+          "id": "multi-tenant",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        },
+        {
+          "type": "server-cache",
+          "id": "memory-cache",
+          "version": "1.0.0",
+          "variant": "ts-node-20"
+        }
+      ],
+      "glue": [
+        {
+          "id": "routes",
+          "file": "src/glue/routes.ts"
+        },
+        {
+          "id": "middleware",
+          "file": "src/glue/middleware.ts"
+        },
+        {
+          "id": "providers",
+          "file": "src/glue/providers.ts"
+        },
+        {
+          "id": "config",
+          "file": "src/glue/config.ts"
+        }
+      ],
+      "capabilities": [
+        "audit",
+        "auth",
+        "build",
+        "db",
+        "http-server",
+        "multi-tenancy",
+        "orm",
+        "server-cache",
+        "testing"
+      ]
+    }
+  ]
+}
